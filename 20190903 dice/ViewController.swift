@@ -10,11 +10,36 @@ import UIKit
 
 class ViewController: UIViewController {
 
+ 
+    @IBOutlet var dices: [UIImageView]!
+    
+    let imageNames = ["one", "two", "three", "four", "five", "six"]
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+     
+   
+        }
+    
+    
+    
+    @IBAction func buttonTop(_ sender: Any) {
+    
+        for imageView in dices{
+            imageView.image = UIImage(named:imageNames.randomElement()!)
+    
+    }
+    
+        
+    
+    }
     }
 
 
-}
+    
+ 
+
 
